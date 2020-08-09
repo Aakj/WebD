@@ -19,7 +19,8 @@ export default function DetailsPage() {
             .then(res => {console.log(res.data); setResponseData(res.data);})
             .catch(err => {console.error(err);});
         }, [uri]);
-
+        
+    if(responseData !== '')
     return (
         <>
             <section className="row-alt">
@@ -112,4 +113,6 @@ export default function DetailsPage() {
             </footer>
         </>
     )
+    else
+        return (<></>)
     }
